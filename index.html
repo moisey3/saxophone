@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Иван Моисеенко — саксофонист</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #f1efe9, #f7f7f7);
+    color: #222;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* ЛЕВЫЕ КОНТАКТЫ */
+.side-contacts {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    display: flex;
+    gap: 28px;
+    z-index: 1000;
+}
+
+.side-contacts a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #222;
+    opacity: 0.7;
+}
+
+.side-contacts a:hover { opacity: 1; }
+
+@media (max-width: 900px) {
+    .side-contacts { display: none; }
+}
+
+/* HERO */
+.hero {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.hero img {
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:28px;
+}
+
+.hero-text {
+    padding: 36px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 80px 0 40px;
+}
+
+/* УСЛУГИ */
+.service {
+    display: flex;
+    gap: 40px;
+    background: white;
+    border-radius: 28px;
+    padding: 36px;
+    margin-bottom: 50px;
+}
+
+.service.reverse { flex-direction: row-reverse; }
+
+.service img {
+    width: 520px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.service-price {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ВИДЕО — ВЕРТИКАЛЬНЫЕ, БЕЗ ЧЁРНЫХ ПОЛЕЙ */
+.video-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.video-item {
+    position: relative;
+    padding-top: 177%;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.video-item iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-title {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: #fff;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+@media (max-width: 800px) {
+    .video-block {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ОТЗЫВЫ */
+.reviews-carousel {
+    background: white;
+    border-radius: 28px;
+    padding: 36px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.review {
+    display: none;
+    text-align: center;
+}
+
+.review.active { display: block; }
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="side-contacts">
+    <a href="https://vk.com/id200818221" target="_blank">VK</a>
+    <a href="https://instagram.com/ivan_moiseenko" target="_blank">INSTAGRAM</a>
+    <a href="https://t.me/moisey_3" target="_blank">TELEGRAM</a>
+</div>
+
+<div class="container">
+
+<div class="hero">
+    <img src="images/hero.jpg">
+    <div class="hero-text">
+        <h1>Иван Моисеенко</h1>
+        <p>Саксофонист • Живая музыка для мероприятий</p>
+        <p>Санкт-Петербург и Ленинградская область</p>
+    </div>
+</div>
+
+<h2>Услуги</h2>
+
+    <div class="service ">
+        <img src="images/corporate.jpg" style="object-position:center;">
+        <div class="service-text">
+            <h3>Корпоративы / банкеты / рестораны</h3>
+            <p>Живое саксофонное сопровождение для мероприятий любого формата. Создаю атмосферу, которая подчёркивает статус события и комфорт гостей.</p>
+            <p class="service-price">от … ₽ / час</p>
+        </div>
+    </div>
+    
+    <div class="service reverse">
+        <img src="images/wedding.jpg" style="object-position:center top;">
+        <div class="service-text">
+            <h3>Свадебная церемония и первый танец</h3>
+            <p>Музыкальное оформление ключевых свадебных моментов — выхода, церемонии и первого танца. Тонко, эмоционально и со вкусом.</p>
+            <p class="service-price">от … ₽</p>
+        </div>
+    </div>
+    
+    <div class="service ">
+        <img src="images/surprise.jpg" style="object-position:center;">
+        <div class="service-text">
+            <h3>Музыкальный сюрприз</h3>
+            <p>Эффектное короткое выступление как запоминающееся музыкальное поздравление.</p>
+            <p class="service-price">от … ₽</p>
+        </div>
+    </div>
+    
+    <div class="service reverse">
+        <img src="images/moments.jpg" style="object-position:center;">
+        <div class="service-text">
+            <h3>Особые моменты</h3>
+            <p>Музыка для предложений руки и сердца, годовщин, выписок из роддома и других личных событий.</p>
+            <p class="service-price">от … ₽</p>
+        </div>
+    </div>
+    
+    <div class="service ">
+        <img src="images/custom.jpg" style="object-position:center;">
+        <div class="service-text">
+            <h3>Индивидуальный заказ композиции</h3>
+            <p>Исполнение выбранной композиции под конкретное событие. Формат и детали обсуждаются индивидуально.</p>
+            <p class="service-price">по договорённости</p>
+        </div>
+    </div>
+    
+
+<h2>Видео</h2>
+<div class="video-block">
+
+    <div class="video-item">
+        <iframe src="https://vk.com/video_ext.php?oid=200818221&id=456239386" allowfullscreen></iframe>
+        <div class="video-title">Свадебная церемония</div>
+    </div>
+    
+    <div class="video-item">
+        <iframe src="https://vk.com/video_ext.php?oid=200818221&id=456239389" allowfullscreen></iframe>
+        <div class="video-title">Корпоративное выступление</div>
+    </div>
+    
+</div>
+
+<h2>Отзывы</h2>
+<div class="reviews-carousel">
+
+    <div class="review">
+        <img src="images/reviews/anna.jpg">
+        <p class="review-text">“Очень атмосферно и красиво. Иван создал настроение всего вечера.”</p>
+        <p class="review-author">Анна • Свадьба</p>
+    </div>
+    
+    <div class="review">
+        <img src="images/reviews/dmitry.jpg">
+        <p class="review-text">“Профессионально, ненавязчиво и со вкусом.”</p>
+        <p class="review-author">Дмитрий • Корпоратив</p>
+    </div>
+    
+    <div class="review">
+        <img src="images/reviews/ekaterina.jpg">
+        <p class="review-text">“Сюрприз получился невероятно трогательным.”</p>
+        <p class="review-author">Екатерина • Музыкальный сюрприз</p>
+    </div>
+    
+</div>
+
+<p style="text-align:center; opacity:0.6; margin-top:20px;">
+    Больше отзывов —
+    <a href="https://www.avito.ru/your_profile_link" target="_blank" style="color:inherit;">на платформе Avito</a>
+</p>
+
+</div>
+
+<script>
+const reviews = document.querySelectorAll('.review');
+let i = 0;
+function showReview(n) {
+    reviews.forEach(r => r.classList.remove('active'));
+    reviews[n].classList.add('active');
+}
+showReview(0);
+setInterval(() => {
+    i = (i + 1) % reviews.length;
+    showReview(i);
+}, 5000);
+</script>
+
+</body>
+</html>
